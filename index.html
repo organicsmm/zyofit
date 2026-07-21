@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Pinterest Tag -->
+<script>
+!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_w6GV88VhXcx9mx");whop.track("page");
+</script>
+<!-- end Pinterest Tag -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Wool Creations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://whop.com" crossorigin>
+<link rel="preconnect" href="https://cdn.whop.com" crossorigin>
+<link rel="dns-prefetch" href="https://whop.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f0eee9;
+    --white: #ffffff;
+    --charcoal: #1c1c1c;
+    --mid: #5a5a5a;
+    --light: #a0a0a0;
+    --border: #e5e0d8;
+    --green: #2a6048;
+    --green-2: #d6ede3;
+    --shadow: 0 1px 20px rgba(0,0,0,.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--charcoal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: .02em;
+  }
+  .secure-badge {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .72rem;
+    font-weight: 500;
+    color: var(--green);
+  }
+
+  /* LAYOUT: checkout left (big), summary right (small) */
+  .page {
+    flex: 1;
+    max-width: 1020px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2.5rem 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 290px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* WHOP CARD — no clipping, full natural height */
+  .checkout-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  #whop-checkout { min-height: 520px; }
+
+  /* ORDER SUMMARY */
+  .summary {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 72px;
+  }
+  .summary-title {
+    font-size: .65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--light);
+    margin-bottom: 1.1rem;
+  }
+  .product-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+  }
+  .product-name { font-size: .88rem; font-weight: 500; }
+  .product-sub { font-size: .72rem; color: var(--light); margin-top: .2rem; }
+  .product-price { font-size: .95rem; font-weight: 600; white-space: nowrap; }
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: .95rem;
+    font-weight: 600;
+  }
+  .trust {
+    margin-top: 1.2rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .74rem;
+    color: var(--mid);
+  }
+  .trust-item svg { color: var(--green); flex-shrink: 0; }
+  .whop-badge {
+    margin-top: 1.1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+    font-size: .68rem;
+    color: var(--light);
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: .72rem;
+    color: var(--light);
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--mid); text-decoration: none; }
+
+  @media (max-width: 760px) {
+    .page { grid-template-columns: 1fr; padding: 1.25rem 1rem 3rem; gap: 1.25rem; }
+    .checkout-card { order: 2; }
+    .summary { order: 1; position: static; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Wool Creations</a>
+  <div class="secure-badge">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+    Secured by Whop
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- LEFT: Whop iframe — direct embed with hide_price=true -->
+  <div class="checkout-card">
+    <!-- ================================================================
+      ✏️  CHANGE CHECKOUT — update plan_XXXXX in the src URL below
+          Also update payment_redirect_url if your success page changes
+      ================================================================ -->
+    <iframe
+      id="whop-iframe"
+      src="https://whop.com/embedded/checkout/plan_TU3lEZR81FqTY/?h=https%3A%2F%2Fwoolcreationpayment.site&v=2&t=woolcreationpayment.site&theme=light&hide_price=true&payment_redirect_url=https%3A%2F%2Fwoolcreationpayment.site%2Fsuccess"
+      style="width:100%;height:700px;border:none;display:block;"
+      scrolling="no"
+      allow="payment"
+    ></iframe>
+  </div>
+
+  <!-- RIGHT: Order summary -->
+  <div class="summary">
+    <div class="summary-title">Order Summary</div>
+    <div class="product-row">
+      <div>
+        <div class="product-name">Crochet Pattern PDF</div>
+        <div class="product-sub">Immediately download</div>
+      </div>
+      <div class="product-price">$2.47</div>
+    </div>
+    <div class="total-row">
+      <span>Total</span>
+      <span>$2.47</span>
+    </div>
+    <div class="trust">
+      <div class="trust-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Secure &amp; encrypted payment
+      </div>
+      <div class="trust-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Instant delivery after payment
+      </div>
+      <div class="trust-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Lifetime access — no expiry
+      </div>
+    </div>
+    <div class="whop-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Your data is never stored · Powered by Whop
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Wool Creations ·
+  <a href="#">Privacy Policy</a> ·
+  <a href="#">Terms of Service</a> ·
+  <a href="mailto:hello@woolcreations.shop">Support</a>
+</footer>
+
+<script>
+const RETURN_URL = "https://woolcreationpayment.site/success";
+
+window.addEventListener('message', function(event) {
+  if (!event.data) return;
+  const d = typeof event.data === 'string'
+    ? (()=>{ try { return JSON.parse(event.data); } catch(e) { return {}; } })()
+    : event.data;
+
+  const iframe = document.getElementById('whop-iframe');
+
+  // ── Auto-resize: Whop sends height via postMessage ──
+  if (d.type === 'resize' || d.type === 'whop:resize') {
+    if (d.height && iframe) {
+      iframe.style.height = (parseInt(d.height) + 40) + 'px';
+    }
+  }
+  // Some Whop versions send it differently
+  if (d.iFrameHeight && iframe) {
+    iframe.style.height = (parseInt(d.iFrameHeight) + 40) + 'px';
+  }
+  if (d.height && iframe && typeof d.height === 'number') {
+    iframe.style.height = (d.height + 40) + 'px';
+  }
+
+  // ── Payment success redirect ──
+  const t  = (d.type   || '').toLowerCase();
+  const ev = (d.event  || '').toLowerCase();
+  const st = (d.status || '').toLowerCase();
+  if (
+    t.includes('payment_success')  || t.includes('checkout_complete')  || t.includes('purchase_complete') ||
+    ev.includes('payment_success') || ev.includes('checkout_complete') ||
+    st === 'succeeded' || st === 'complete' || st === 'paid'
+  ) {
+    window.location.href = RETURN_URL;
+  }
+});
+</script>
+</body>
+</html>
